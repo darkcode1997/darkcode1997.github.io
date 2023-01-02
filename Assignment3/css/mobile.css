@@ -1,0 +1,19 @@
+@media (max-width: 576px) {
+    #banner {
+        height: 500px;
+    }
+    #nav-bar nav.container-box {
+        padding-left: 20px;
+    }
+    #nav-bar nav.container-box a {
+        display: flex;
+        border-left: none;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 20px;
+    }
+    #nav-bar nav.container-box i {
+        font-size: 20px;
+    }
+ }
