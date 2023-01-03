@@ -45,6 +45,12 @@
         border-left: none;
         padding-left: 0px;
     }
+    /* #experience, #skill, #language, #work, #study, #interests-happy{
+        display: block !important;
+    } */
+    .box-job-info .overlay {
+        display: none;
+    }
     /* footer */
     #footer .container-box ul a span {
         display: none;
@@ -102,6 +108,9 @@
     .certificate-top .item-certificate:nth-child(2) img {
         border-left: none;
         padding-left: 0px;
+    }
+    .box-job-info .overlay {
+        display: none;
     }
     #footer .container-box ul a span {
         display: none;

@@ -28,6 +28,9 @@
     .item-certificate:nth-child(2) {
         border-left: 1px solid #d6c08d;
     }
+    .box-job-info .overlay {
+        display: none;
+    }
     #footer .container-box ul a span {
         display: inline;
         font-size: 16px;

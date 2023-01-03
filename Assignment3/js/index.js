@@ -22,8 +22,9 @@ function submit() {
 
 // ẩn thông tin kinh nghiệm kỹ năng
 function more(id) {
-    document.getElementById(id).classList.remove('d-none')
+    document.getElementById(id).classList.remove('d-lg-none')
     document.getElementById(id).classList.add('d-block')
+    document.getElementById(`${id}-overlay`).classList.remove('d-lg-flex') 
     document.getElementById(`${id}-overlay`).classList.add('d-none') 
     document.getElementById(`${id}-view-less`).classList.remove('d-none')
     document.getElementById(`${id}-view-less`).classList.add('d-block')
@@ -31,8 +32,8 @@ function more(id) {
 function less(id) {
     document.getElementById(`${id}-view-less`).classList.add('d-none')
     document.getElementById(id).classList.remove('d-block')
-    document.getElementById(id).classList.add('d-none')
+    document.getElementById(id).classList.add('d-lg-none')
     document.getElementById(`${id}-overlay`).classList.remove('d-none') 
-    document.getElementById(`${id}-overlay`).classList.add('d-flex') 
+    document.getElementById(`${id}-overlay`).classList.add('d-lg-flex') 
     
 }
