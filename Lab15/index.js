@@ -33,3 +33,25 @@ if(averagePopulationCountry < population) {
 }else {
     console.log(`${country}'s population is ${33 - population} million below average' `)
 }
+
+//Lab15.6
+// IBM
+function calculatorIBM(mass,height) {
+   return mass/(height*height)
+}
+let markHigherBMI = false
+let heightMark
+let massMark 
+let heightJohn
+let massJohn 
+//dữ liệu 1
+markHigherBMI = calculatorIBM(78, 1.69) > calculatorIBM(92, 1.95)
+//dữ liệu 2
+markHigherBMI = calculatorIBM(95, 1.88) > calculatorIBM(85, 1.76)
+console.log(markHigherBMI);
+// Lab15.6.2
+if(markHigherBMI) {
+    console.log(`Mark's BMI(${calculatorIBM(95, 1.88)}) is higher than John's(${calculatorIBM(85, 1.76)})`);
+}else {
+    console.log(`John's BMI(${calculatorIBM(85, 1.76)}) is higher than Mark's(${calculatorIBM(95, 1.88)})`);
+}
