@@ -1,3 +1,35 @@
 @media (min-width: 768px) { 
-    
+    .info {
+        padding-left: 0px;
+    }
+    #nav-bar nav.container-box a:last-child {
+        border-right: 2px solid whitesmoke;
+    }
+    #nav-bar nav.container-box a {
+        padding: 20px;
+    }
+    .item-certificate {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .item-certificate img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        height: 200px;
+    }
+    .content-item-certificate p {
+        font-size: 16px;
+    }
+    .certificate-top .item-certificate:nth-child(2) img {
+        border-left: none;
+        padding-left: 0px;
+    }
+    .item-certificate:nth-child(2) {
+        border-left: 1px solid #d6c08d;
+    }
+    #footer .container-box ul a span {
+        display: inline;
+        font-size: 16px;
+    }
  }

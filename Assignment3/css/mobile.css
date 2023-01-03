@@ -1,9 +1,15 @@
-@media (max-width: 576px) {
+/* Màn điện thoại nhỏ */
+@media (max-width: 575px) {
+    /* banner */
     #banner {
         height: 500px;
     }
+    /* navbar */
     #nav-bar nav.container-box {
         padding-left: 20px;
+    }
+    #nav-bar nav.container-box a:nth-child(3) {
+        display: none;
     }
     #nav-bar nav.container-box a {
         display: flex;
@@ -15,5 +21,89 @@
     }
     #nav-bar nav.container-box i {
         font-size: 20px;
+    }
+    /* about */
+    #personal-info .info {
+        padding-left: 0px;
+    }
+    #about .container-box > div .section-title, #certificate .container-box h1.section-title, #project .section-title {
+        font-size: 32px;
+    }
+    .item-certificate {
+        flex-direction: column;
+    }
+    .item-certificate img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        height: 250px;
+    }
+    .content-item-certificate p {
+        font-size: 16px;
+    }
+    .certificate-top .item-certificate:nth-child(2) img {
+        border-left: none;
+        padding-left: 0px;
+    }
+    /* footer */
+    #footer .container-box ul a span {
+        display: none;
+    }
+ }
+
+
+ /* Màn điện thoại lớn */
+ @media (min-width: 576px) and (max-width: 767px) {
+    #banner {
+        height: 500px;
+    }
+    /* navbar */
+    #nav-bar nav.container-box {
+        padding-left: 20px;
+    }
+    #nav-bar nav.container-box a:nth-child(3) {
+        display: none;
+    }
+    #nav-bar nav.container-box a {
+        display: flex;
+        border-left: none;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 20px;
+    }
+    #nav-bar nav.container-box i {
+        font-size: 20px;
+    }
+
+    /* about */
+    #target .container-target {
+        max-width: 100%;
+        float: left;
+    }
+    #personal-info .info {
+        padding-left: 0px;
+    }
+    #about .container-box > div .section-title, #certificate .container-box h1.section-title, #project .section-title {
+        font-size: 32px;
+    }
+    .item-certificate {
+        flex-direction: column;
+    }
+    .item-certificate img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        height: 350px;
+    }
+    .content-item-certificate p {
+        font-size: 16px;
+    }
+    .certificate-top .item-certificate:nth-child(2) img {
+        border-left: none;
+        padding-left: 0px;
+    }
+    #footer .container-box ul a span {
+        display: none;
     }
  }

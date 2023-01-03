@@ -16,8 +16,8 @@ img {
 section > .container-box {
   /* width: 1170px; */
   margin: auto;
-  display: block;
-  padding: 30px 50px;
+  /* display: block; */
+  padding: 30px;
 }
 
 #nav-bar {
@@ -86,7 +86,7 @@ section > .container-box {
 }
 /* about */
 #about .container-box {
-  display: grid;
+  /* display: grid; */
   /* grid-template-columns: 1fr 1fr; */
   padding: 0px;
   margin: 0;
@@ -138,7 +138,7 @@ section > .container-box {
   color: #199cdb;
 }
 #job-info .container-box {
-  display: grid;
+  /* display: grid; */
   /* grid-template-columns: 1fr 1fr 1fr;
   gap: 20px; */
 }
@@ -151,15 +151,16 @@ section > .container-box {
 .title-job-info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 50px;
 }
 .title-job-info h2 {
   font-size: 24px;
   font-weight: 500;
+  line-height: 0;
 }
 .title-job-info i {
-  font-size: 30px;
+  font-size: 50px;
   color: rgb(94, 94, 91, 42%);
 }
 .list-job-info {
@@ -200,9 +201,9 @@ section > .container-box {
   display: flex;
   justify-content: space-between;
 }
-.interests .item-interests {
+/* .interests .item-interests {
   margin-right: 15px;
-}
+} */
 .interests .item-interests div i {
   display: block;
   font-size: 28px;
@@ -285,13 +286,14 @@ section > .container-box {
 }
 /* project */
 .project-box {
-  display: grid;
+  /* display: grid; */
   /* grid-template-columns: 1fr 1fr 1fr; */
-  gap: 20px;
+  /* gap: 20px; */
 }
 .project-item {
   border: 1px solid gainsboro;
   border-radius: 4px;
+  height: 100%;
 }
 .project-item img {
   width: 100%;
@@ -316,15 +318,17 @@ section > .container-box {
   color: rgb(94, 94, 91);
 }
 .time p.year {
-  padding: 2px 18px;
+  padding: 2px 12px;
   background-color: #199cdb;
   color: white;
+  height: 30px;
+  line-height: 25px;
   border-radius: 10px;
 }
 .time p:nth-child(2) i,
 .time p:nth-child(3) i {
   display: inline-block;
-  margin-right: 8px;
+  /* margin-right: 8px; */
 }
 .description,
 .action,
@@ -333,6 +337,7 @@ section > .container-box {
   font-size: 14px;
   color: rgb(94, 94, 91);
   display: grid;
+  gap: 5px;
   grid-template-columns: 25% 75%;
 }
 .description,

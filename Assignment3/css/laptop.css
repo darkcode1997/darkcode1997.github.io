@@ -1,7 +1,14 @@
 @media (min-width: 992px) { 
-
+    .item-certificate img {
+        width: 180px;
+        height: 100px;
+        margin-right: 20px;
+    }
+    .item-certificate {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .box-job-info {
+        height: 100%;
+    }
 }
-
-@media (min-width: 1200px) { 
-    
- }
