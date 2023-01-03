@@ -19,3 +19,8 @@
         height: 100%;
     }
 }
+@media (min-width: 1200px) { 
+    #nav-bar nav.container-box a {
+        padding:20px 50px;
+    }
+}

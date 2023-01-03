@@ -56,28 +56,45 @@
 			</div>
 			<div id="personal-info" class="bg-grey col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 				<h1 class="section-title">Thông tin cá nhân</h1>
-				<ul class="info">
-					<li><span>Giới tính</span> : Nam</li>
-					<li><span>Ngày sinh</span> : 06/11/1997</li>
-					<li><span>Điện thoại</span> : 0339172861</li>
-					<li><span>Email</span> : phamnhat05111997@gmail.com</li>
-					<li><span>Địa chỉ</span> : Giao Thủy, Nam Định</li>
-					<li><span>Website</span> : https://mywebsitetech.com</li>
-				</ul>
-				<div class="icons-personal-info">
-					<a href="#">
-						<i class="icon-twitter"></i>
-					</a>
-					<a href="#">
-						<i class="icon-facebook"></i>
-					</a>
-					<a href="#">
-						<i class="icon-gplus"></i>
-					</a>
-					<a href="#">
-						<i class="icon-linkedin"></i>
-					</a>
+				<div class="d-none" id="personal-info-content">
+					<ul class="info">
+						<li><span>Giới tính</span> : Nam</li>
+						<li><span>Ngày sinh</span> : 06/11/1997</li>
+						<li><span>Điện thoại</span> : 0339172861</li>
+						<li><span>Email</span> : phamnhat05111997@gmail.com</li>
+						<li><span>Địa chỉ</span> : Giao Thủy, Nam Định</li>
+						<li><span>Website</span> : https://mywebsitetech.com</li>
+					</ul>
+					<div class="icons-personal-info">
+						<a href="#">
+							<i class="icon-twitter"></i>
+						</a>
+						<a href="#">
+							<i class="icon-facebook"></i>
+						</a>
+						<a href="#">
+							<i class="icon-gplus"></i>
+						</a>
+						<a href="#">
+							<i class="icon-linkedin"></i>
+						</a>
+					</div>
 				</div>
+				<div id="form-info">
+					<div>
+						<input type="text" autocomplete="true" class="form-control w-100" placeholder="Enter email" id="validationEmails" required>
+						<div id="invalid-feedback-error" class="d-none text-danger mt-1">
+							Email không đúng định dạng
+						</div>
+						<div id="invalid-feedback-entry" class="d-none text-danger mt-1">
+							Nhập email để xác thực!
+						</div>
+						<div class="col-12">
+							<button class="btn btn-primary mt-3 btn-submit" onclick="submit()">Submit</button>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</section>

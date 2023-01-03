@@ -12,7 +12,10 @@ img {
 .bg-grey {
   background: #f7f7f7;
 }
-
+.btn-submit {
+  background-color: #199cdb !important;
+  border: 1px solid #199cdb;
+}
 section > .container-box {
   /* width: 1170px; */
   margin: auto;
@@ -96,10 +99,10 @@ section > .container-box {
 #target {
   background-color: #d1cccc0f;
 }
-#target .container-target {
+/* #target .container-target {
   max-width: 520px;
   float: right;
-}
+} */
 #target p {
   font-size: 16px;
   color: rgb(94, 94, 91);
