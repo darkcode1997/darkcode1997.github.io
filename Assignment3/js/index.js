@@ -27,13 +27,14 @@ function more(id) {
     document.getElementById(`${id}-overlay`).classList.remove('d-lg-flex') 
     document.getElementById(`${id}-overlay`).classList.add('d-none') 
     document.getElementById(`${id}-view-less`).classList.remove('d-none')
-    document.getElementById(`${id}-view-less`).classList.add('d-block')
+    document.getElementById(`${id}-view-less`).classList.add('d-lg-block')
 }
 function less(id) {
+    document.getElementById(`${id}-view-less`).classList.remove('d-lg-block')
     document.getElementById(`${id}-view-less`).classList.add('d-none')
     document.getElementById(id).classList.remove('d-block')
     document.getElementById(id).classList.add('d-lg-none')
-    document.getElementById(`${id}-overlay`).classList.remove('d-none') 
+    document.getElementById(`${id}-overlay`).classList.remove('d-none')
     document.getElementById(`${id}-overlay`).classList.add('d-lg-flex') 
     
 }

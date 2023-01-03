@@ -45,6 +45,9 @@
         border-left: none;
         padding-left: 0px;
     }
+    .less {
+        display: none;
+    }
     /* #experience, #skill, #language, #work, #study, #interests-happy{
         display: block !important;
     } */
@@ -110,6 +113,9 @@
         padding-left: 0px;
     }
     .box-job-info .overlay {
+        display: none;
+    }
+    .less {
         display: none;
     }
     #footer .container-box ul a span {
