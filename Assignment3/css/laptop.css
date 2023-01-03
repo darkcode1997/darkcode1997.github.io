@@ -16,7 +16,55 @@
         gap: 10px;
     }
     .box-job-info {
+        cursor: pointer;
         height: 100%;
+        position: relative;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .overlay button img{
+        width: 15px;
+        height: 15px;
+    }
+    .less {
+        position: absolute;
+        bottom: 5px;
+        right: 20px;
+    }
+    .overlay button{
+        width: 120px;
+        border:none;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        background-color:#d8c8a3
+    }
+    .experience:hover .overlay{ 
+        display: flex;
+    }
+    .skill:hover .overlay{ 
+        display: flex;
+    }
+    .language:hover .overlay{ 
+        display: flex;
+    }
+    .work:hover .overlay{ 
+        display: flex;
+    }
+    .study:hover .overlay{ 
+        display: flex;
+    }
+    .interests-happy:hover .overlay{ 
+        display: flex;
     }
 }
 @media (min-width: 1200px) { 

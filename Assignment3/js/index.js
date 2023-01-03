@@ -1,5 +1,6 @@
+
+//ẩn thông tin cá nhân
 const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 const checkRegex = new RegExp(regex);
 function submit() {
     let email = document.getElementById('validationEmails').value
@@ -17,4 +18,21 @@ function submit() {
             document.getElementById('invalid-feedback-error').classList.add('d-block')
         }
     }
+}
+
+// ẩn thông tin kinh nghiệm kỹ năng
+function more(id) {
+    document.getElementById(id).classList.remove('d-none')
+    document.getElementById(id).classList.add('d-block')
+    document.getElementById(`${id}-overlay`).classList.add('d-none') 
+    document.getElementById(`${id}-view-less`).classList.remove('d-none')
+    document.getElementById(`${id}-view-less`).classList.add('d-block')
+}
+function less(id) {
+    document.getElementById(`${id}-view-less`).classList.add('d-none')
+    document.getElementById(id).classList.remove('d-block')
+    document.getElementById(id).classList.add('d-none')
+    document.getElementById(`${id}-overlay`).classList.remove('d-none') 
+    document.getElementById(`${id}-overlay`).classList.add('d-flex') 
+    
 }

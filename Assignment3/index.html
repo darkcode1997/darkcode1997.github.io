@@ -43,6 +43,7 @@
 		</nav>
 	</section>
 	<!-- End Navbar -->
+	<!-- Start about -->
 	<section id="about">
 		<div class="container-box row">
 			<div id="target" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -98,73 +99,94 @@
 			</div>
 		</div>
 	</section>
+	<!-- end about -->
 	<section id="job-info">
 		<div class="container-box container">
 			<div class="row g-3">
 				<div class="col-12 col-sm-12 col-md-6 col-lg-12">
 					<div class="row">
 						<div class="col-12 col-lg-4">
-							<div class="box-job-info">
+							<div class="box-job-info experience">
 								<div class="title-job-info">
 									<h2>Kinh nghiệm</h2>
 									<i class="ic-toolbox"></i>
 								</div>
-								<ul class="list-job-info">
-									<li>
-										<p class="name-company">Full Stack Developer - Công ty Y</p>
-										<p class="time-company">05/2022 - <span class="now">Hiện tại</span></p>
-										<p> -­ Xây dựng, phát triển Website dựa trên thiết kế và yêu cầu đã có. </p>
-										<p> - Phân tích và thiết kế Database, sử dụng các hệ quản trị CSDL (MySQL, SQLServer, NoSQL,
-											…) và viết được các câu truy vấn. </p>
-										<p> - Sử dụng ngôn ngữ server­side (Python, Java, …) để xây dựng các Web Server </p>
-									</li>
-									<li>
-										<p class="name-company">Web Designer - Công ty X</p>
-										<p class="time-company">06/2021 - ­04/2022</span></p>
-										<p> -­ Thiết kế Website dự trên yêu cầu của khách hàng. </p>
-										<p> - Sử dụng các công cụ: Figma, Canva, PTS. </p>
-									</li>
-								</ul>
+								<div id="experience" class="d-none">
+									<ul class="list-job-info">
+										<li>
+											<p class="name-company">Full Stack Developer - Công ty Y</p>
+											<p class="time-company">05/2022 - <span class="now">Hiện tại</span></p>
+											<p> -­ Xây dựng, phát triển Website dựa trên thiết kế và yêu cầu đã có. </p>
+											<p> - Phân tích và thiết kế Database, sử dụng các hệ quản trị CSDL (MySQL, SQLServer, NoSQL,
+												…) và viết được các câu truy vấn. </p>
+											<p> - Sử dụng ngôn ngữ server­side (Python, Java, …) để xây dựng các Web Server </p>
+										</li>
+										<li>
+											<p class="name-company">Web Designer - Công ty X</p>
+											<p class="time-company">06/2021 - ­04/2022</span></p>
+											<p> -­ Thiết kế Website dự trên yêu cầu của khách hàng. </p>
+											<p> - Sử dụng các công cụ: Figma, Canva, PTS. </p>
+										</li>
+									</ul>
+								</div>
+								<div class="overlay" id="experience-overlay">
+									<button onclick="more('experience')"><img src="./images/down.svg" alt=""></i><span>View More</span></button>
+								</div>
+								<p class="d-none text-primary w-100 text-end less" onclick="less('experience')" id="experience-view-less">View Less</p>
 							</div>
 						</div>
 						<div class="col-12 col-lg-4">
-							<div class="box-job-info">
+							<div class="box-job-info skill">
 								<div class="title-job-info">
 									<h2>Kỹ năng</h2>
 									<i class="ic-tools-2"></i>
 								</div>
-								<p class="titles-name">HTML/CSS: Fundamental</p>
-								<span class="rank-active"></span>
-								<span class="rank-inactive"></span>
-								<span class="rank-inactive"></span>
-								<p class="titles-name"> Javascript: Intermediate </p>
-								<span class="rank-active"></span>
-								<span class="rank-active"></span>
-								<span class="rank-inactive"></span>
-								<p class="titles-name"> NodeJS: Intermediate </p>
-								<span class="rank-active"></span>
-								<span class="rank-active"></span>
-								<span class="rank-inactive"></span>
-								<p class="titles-name"> Bootstrap 5: Fundamental </p>
-								<span class="rank-active"></span>
-								<span class="rank-inactive"></span>
-								<span class="rank-inactive"></span>
+								<div class="d-none" id="skill">
+									<p class="titles-name">HTML/CSS: Fundamental</p>
+									<span class="rank-active"></span>
+									<span class="rank-inactive"></span>
+									<span class="rank-inactive"></span>
+									<p class="titles-name"> Javascript: Intermediate </p>
+									<span class="rank-active"></span>
+									<span class="rank-active"></span>
+									<span class="rank-inactive"></span>
+									<p class="titles-name"> NodeJS: Intermediate </p>
+									<span class="rank-active"></span>
+									<span class="rank-active"></span>
+									<span class="rank-inactive"></span>
+									<p class="titles-name"> Bootstrap 5: Fundamental </p>
+									<span class="rank-active"></span>
+									<span class="rank-inactive"></span>
+									<span class="rank-inactive"></span>
+								</div>
+								<div class="overlay" id="skill-overlay">
+									<button onclick="more('skill')"><img src="./images/down.svg" alt=""></i><span>View More</span></button>
+								</div>
+								<p class="d-none text-primary w-100 text-end less" onclick="less('skill')" id="skill-view-less">View Less</p>
+								
 							</div>
 						</div>
 						<div class="col-12 col-lg-4">
-							<div class="box-job-info">
+							<div class="box-job-info language">
 								<div class="title-job-info">
 									<h2>Ngôn ngữ</h2>
 									<i class="ic-mic"></i>
 								</div>
-								<p class="titles-name"> Tiếng Anh- IELTS 7.0 </p>
-								<span class="rank-active"></span>
-								<span class="rank-active"></span>
-								<span class="rank-inactive"></span>
-								<p class="titles-name"> Tiếng Nhật - JLPT N4 </p>
-								<span class="rank-active"></span>
-								<span class="rank-inactive"></span>
-								<span class="rank-inactive"></span>
+								<div class="d-none" id="language">
+									<p class="titles-name"> Tiếng Anh- IELTS 7.0 </p>
+									<span class="rank-active"></span>
+									<span class="rank-active"></span>
+									<span class="rank-inactive"></span>
+									<p class="titles-name"> Tiếng Nhật - JLPT N4 </p>
+									<span class="rank-active"></span>
+									<span class="rank-inactive"></span>
+									<span class="rank-inactive"></span>
+								</div>
+								<div class="overlay" id="language-overlay">
+									<button onclick="more('language')"><img src="./images/down.svg" alt=""></i><span>View More</span></button>
+								</div>
+								<p class="d-none text-primary w-100 text-end less" onclick="less('language')" id="language-view-less">View Less</p>
+								
 							</div>
 						</div>
 					</div>
@@ -172,80 +194,100 @@
 				<div class="col-12 col-sm-12 col-md-6 col-lg-12">
 					<div class="row">
 						<div class="col-12 col-lg-4">
-							<div class="box-job-info">
+							<div class="box-job-info work">
 								<div class="title-job-info">
 									<h2>Hoạt động</h2>
 									<i class="ic-toolbox"></i>
 								</div>
-								<ul class="list-job-info">
-									<li>
-										<p class="name-company">FPT Edu Hackathon 2019</p>
-										<p class="time-company">03/2019 - 05/2019 </p>
-										<p> -­ Giải 3 bảng A </p>
-										<p> - Đề tài: Trang web về phân loại rác thải </p>
-									</li>
-									<li>
-										<p class="name-company">Câu lạc bộ Z</p>
-										<p class="time-company">08/2016 - 08/2017</p>
-										<p> -­ Trưởng ban chuyên môn </p>
-									</li>
-								</ul>
+								<div class="d-none" id="work">
+									<ul class="list-job-info">
+										<li>
+											<p class="name-company">FPT Edu Hackathon 2019</p>
+											<p class="time-company">03/2019 - 05/2019 </p>
+											<p> -­ Giải 3 bảng A </p>
+											<p> - Đề tài: Trang web về phân loại rác thải </p>
+										</li>
+										<li>
+											<p class="name-company">Câu lạc bộ Z</p>
+											<p class="time-company">08/2016 - 08/2017</p>
+											<p> -­ Trưởng ban chuyên môn </p>
+										</li>
+									</ul>
+								</div>
+								<div class="overlay" id="work-overlay">
+									<button onclick="more('work')"><img src="./images/down.svg" alt=""></i><span>View More</span></button>
+								</div>
+								<p class="d-none text-primary w-100 text-end less" onclick="less('work')" id="work-view-less">View Less</p>
 							</div>
 						</div>
 						<div class="col-12 col-lg-4">
-							<div class="box-job-info">
+							<div class="box-job-info study">
 								<div class="title-job-info">
 									<h2>Học vấn</h2>
 									<i class="ic-pencil"></i>
 								</div>
-								<ul class="list-job-info">
-									<li>
-										<p class="name-company">FUNiX</p>
-										<p class="time-company">06/2021 - 05/2022</p>
-										<p> -­ Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack. </p>
-										<p> - GPA: 9 / 10 </p>
-									</li>
-									<li>
-										<p class="name-company">Cử nhân ­ ĐH FPT</p>
-										<p class="time-company">08/2016 ­ - 07/2019</p>
-										<p> -­ Chuyên ngành: Kỹ thuật phần mềm </p>
-										<p> - GPA: 3.2 / 4 </p>
-									</li>
-								</ul>
+								<div class="d-none" id="study">
+									<ul class="list-job-info">
+										<li>
+											<p class="name-company">FUNiX</p>
+											<p class="time-company">06/2021 - 05/2022</p>
+											<p> -­ Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack. </p>
+											<p> - GPA: 9 / 10 </p>
+										</li>
+										<li>
+											<p class="name-company">Cử nhân ­ ĐH FPT</p>
+											<p class="time-company">08/2016 ­ - 07/2019</p>
+											<p> -­ Chuyên ngành: Kỹ thuật phần mềm </p>
+											<p> - GPA: 3.2 / 4 </p>
+										</li>
+									</ul>
+								</div>
+								<div class="overlay" id="study-overlay">
+									<button onclick="more('study')"><img src="./images/down.svg" alt=""></i><span>View More</span></button>
+								</div>
+								<p class="d-none text-primary w-100 text-end less" onclick="less('study')" id="study-view-less">View Less</p>
+								
 							</div>
 						</div>
 						<div class="col-12 col-lg-4">
-							<div class="box-job-info">
+							<div class="box-job-info interests-happy">
 								<div class="title-job-info">
 									<h2>Sở thích</h2>
 									<i class="ic-telescope"></i>
 								</div>
-								<div class="interests row g-3">
-									<div class="item-interests col-3">
-										<div>
-											<i class="ic-megaphone"></i>
+								<div class="d-none" id="interests-happy">
+									<div class="interests row g-3" >
+										<div class="item-interests col-3">
+											<div>
+												<i class="ic-megaphone"></i>
+											</div>
+											<span>Âm nhạc</span>
 										</div>
-										<span>Âm nhạc</span>
-									</div>
-									<div class="item-interests col-3">
-										<div>
-											<i class="ic-strategy"></i>
+										<div class="item-interests col-3">
+											<div>
+												<i class="ic-strategy"></i>
+											</div>
+											<span>Chơi game</span>
 										</div>
-										<span>Chơi game</span>
-									</div>
-									<div class="item-interests col-3">
-										<div>
-											<i class="ic-hotairballoon"></i>
+										<div class="item-interests col-3">
+											<div>
+												<i class="ic-hotairballoon"></i>
+											</div>
+											<span>Du lịch</span>
 										</div>
-										<span>Du lịch</span>
-									</div>
-									<div class="item-interests col-3">
-										<div>
-											<i class="ic-basket"></i>
+										<div class="item-interests col-3">
+											<div>
+												<i class="ic-basket"></i>
+											</div>
+											<span>Nấu ăn</span>
 										</div>
-										<span>Nấu ăn</span>
 									</div>
 								</div>
+								
+								<div class="overlay" id="interests-happy-overlay">
+									<button onclick="more('interests-happy')"><img src="./images/down.svg" alt=""></i><span>View More</span></button>
+								</div>
+								<p class="d-none text-primary w-100 text-end less" onclick="less('interests-happy')" id="interests-happy-view-less">View Less</p>
 							</div>
 						</div>
 					</div>
