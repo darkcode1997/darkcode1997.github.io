@@ -85,6 +85,10 @@ body {
     .content .content-item {
         border-bottom: none;
     }
+    .col-goals {
+        display: grid;
+        grid-template-rows: 500px 300px;
+    }
     .box-content {
         display: grid;
         grid-template-columns: 25% 75%;
