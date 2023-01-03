@@ -86,8 +86,6 @@ section > .container-box {
 }
 /* about */
 #about .container-box {
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
   padding: 0px;
   margin: 0;
   width: 100%;
@@ -136,11 +134,6 @@ section > .container-box {
   font-size: 12px;
   cursor: pointer;
   color: #199cdb;
-}
-#job-info .container-box {
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px; */
 }
 .box-job-info {
   padding: 30px;
@@ -249,11 +242,6 @@ section > .container-box {
 .box-certificate {
   margin-top: 40px;
 }
-/* .certificate-top,
-.certificate-bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
 .certificate-top {
   border-bottom: 1px solid #d6c08d;
 }
@@ -285,11 +273,6 @@ section > .container-box {
   font-size: 14px;
 }
 /* project */
-.project-box {
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* gap: 20px; */
-}
 .project-item {
   border: 1px solid gainsboro;
   border-radius: 4px;
@@ -328,7 +311,6 @@ section > .container-box {
 .time p:nth-child(2) i,
 .time p:nth-child(3) i {
   display: inline-block;
-  /* margin-right: 8px; */
 }
 .description,
 .action,

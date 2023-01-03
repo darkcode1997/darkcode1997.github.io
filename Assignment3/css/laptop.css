@@ -1,8 +1,15 @@
 @media (min-width: 992px) { 
+    .item-certificate:nth-child(2) {
+        border-left: none;
+    }
     .item-certificate img {
         width: 180px;
         height: 100px;
         margin-right: 20px;
+    }
+    .item-certificate:nth-child(2) img {
+        padding-left: 10px !important;
+        border-left: 1px solid #d6c08d !important;
     }
     .item-certificate {
         flex-direction: row;
