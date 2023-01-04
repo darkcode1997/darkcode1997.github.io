@@ -53,3 +53,43 @@ let population = 33
 let result = population > 13 ? `Portugal's population is above average` : `Portugal's population is below average`
 
 // Lab 16.6
+// 16.6.1
+const minCoin = 100
+function averageCoin(a, b, c) {
+    return (a + b + c) /3
+}
+// kiem tra Dữ liệu Bonus 2
+
+// let averageDolphinsCoin = averageCoin(97, 112, 101)
+// let averageKoalasCoin = averageCoin(109, 95, 106)
+
+
+// kiem tra Bonus 1
+let averageDolphinsCoin = averageCoin(97, 112, 101)
+let averageKoalasCoin = averageCoin(109, 95, 123)
+if(averageKoalasCoin >= 100 || averageDolphinsCoin >= 100) {
+    if( averageDolphinsCoin> averageKoalasCoin && averageDolphinsCoin >= 100) {
+        console.log('Dolphins là đội chiến thắng')
+    }else if(averageKoalasCoin > averageDolphinsCoin && averageKoalasCoin >= 100) {
+        console.log('Koalas là đội chiến thắng')
+    }else if(averageKoalasCoin === averageDolphinsCoin) {
+        console.log('Hai đội hòa nhau')
+    }else {
+        console.log('Không có đội nào chiến thắng')
+    }
+}else {
+    console.log('Không có đội nào chiến thắng')
+}
+
+// Lab16.6.2
+let tipPercent = 15/100
+let tipMoney = 0
+// let order = 430
+// let order = 40
+let order = 275
+if(50<=order <=300) {
+}else {
+    tipPercent = 20/100
+}
+tipMoney = order * tipPercent
+console.log('tipMoney','$' +tipMoney );
