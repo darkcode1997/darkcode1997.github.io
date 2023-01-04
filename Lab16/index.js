@@ -87,7 +87,7 @@ let tipMoney = 0
 // let order = 430
 // let order = 40
 let order = 275
-if(50<=order <=300) {
+if(300>=order && order >=50) {
 }else {
     tipPercent = 20/100
 }
