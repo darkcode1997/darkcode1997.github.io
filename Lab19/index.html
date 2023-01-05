@@ -6,9 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lab19</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./index.js"></script>
 </head>
 <body>
-    <h1>Guess My Number</h1>
+    <header>
+        <h1>Guess My Number!</h1>
+        <p class="between">(Between 1 and 20)</p>
+        <button class="btn again">Again!</button>
+        <div class="number">?</div>
+    </header>
+    <main>
+
+        <section class="left">
+            <input type="number" class="guess">
+        <button class="btn check">Check!</button>
+        </section>
+        <section class="right">
+            <p class="message">Start guesing...</p>
+            <p class="label-score">Score: <span class="score">20</span></p>
+            <p class="label-highsocre">
+                Highsocre: <span class="highsocre">0</span>
+            </p>
+        </section>
+    </main>
+    <script src="./index.js"></script>
 </body>
 </html>
