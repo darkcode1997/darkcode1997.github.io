@@ -5,7 +5,6 @@ const checkRegex = new RegExp(regex);
 function submit() {
     let email = document.getElementById('validationEmails').value
     if(email === '') {
-        document.getElementById('invalid-feedback-error').classList.remove('d-block')
         document.getElementById('invalid-feedback-error').classList.add('d-none')
         document.getElementById('invalid-feedback-entry').classList.remove('d-none')
         document.getElementById('invalid-feedback-entry').classList.add('d-block')
