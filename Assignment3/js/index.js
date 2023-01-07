@@ -5,18 +5,14 @@ const checkRegex = new RegExp(regex);
 function submit() {
     let email = document.getElementById('validationEmails').value
     if(email === '') {
-        document.getElementById('invalid-feedback-error').classList.add('d-none')
-        document.getElementById('invalid-feedback-entry').classList.remove('d-none')
-        document.getElementById('invalid-feedback-entry').classList.add('d-block')
+        document.getElementById('invalid-feedback-error').innerText='Nhập email để xác thực!'
     } else {
         if(checkRegex.test(email)) {
             document.getElementById('form-info').classList.add('d-none')
-            document.getElementById('invalid-feedback-error').classList.add('d-none')
+            document.getElementById('invalid-feedback-error').innerText=''
             document.getElementById('personal-info-content').classList.remove('d-none')
         }else {
-            document.getElementById('invalid-feedback-entry').classList.add('d-none')
-            document.getElementById('invalid-feedback-error').classList.remove('d-none')
-            document.getElementById('invalid-feedback-error').classList.add('d-block')
+            document.getElementById('invalid-feedback-error').innerText='Email không đúng định dạng'
         }
     }
 }
