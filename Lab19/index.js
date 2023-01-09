@@ -23,8 +23,12 @@ document.querySelector('.check').addEventListener('click', () => {
         }
         document.querySelector('.score').textContent = scoreNumber
     }else if(number < guess) {
-        scoreNumber--
-        document.querySelector('.message').textContent = 'To High'
+        if(scoreNumber > 0) {
+            document.querySelector('.message').textContent = 'To High!'
+            scoreNumber--
+        }else {
+            document.querySelector('.message').textContent = 'You lost the game'
+        }
         document.querySelector('.score').textContent = scoreNumber
     }
 })
