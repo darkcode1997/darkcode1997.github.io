@@ -14,13 +14,13 @@
         <button class="btn show2" onclick="showModal()">Show Modal 2</button>
         <button class="btn show3" onclick="showModal()">Show Modal 3</button>
         <div class="modal hidden">
-            <button class="close-modal">&times;</button>
+            <button class="close-modal" onclick="closeModal()">&times;</button>
             <h1> I'm a modal window </h1>
             <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos eum obcaecati harum officiis nihil.
                 Tenetur minima provident, magni eius repellat atque dolor vel debitis quam obcaecati nihil, in nulla a.
             </p>
         </div>
-        <div class="overlay hidden"></div>
+        <div class="overlay hidden" onclick="closeModal()"></div>
         </div>
     <script src="./index.js"></script>
 </body>
