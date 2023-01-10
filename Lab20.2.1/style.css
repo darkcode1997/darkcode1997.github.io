@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    color: #333;
+    background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.container {
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 800px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.35);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+.active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.player-box {
+    padding: 100px;
+    transition: all 0.75s;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+.images {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 150px;
+    left: 50%;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+}
+.btn {
+    background-color: white;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #444;
+    border: none;
+    background-color: white;
+    box-shadow: 0 1.75rem 3.5rem rgb(0 0 0 / 10%);
+    transform: translateX(-50%);
+}
+.name-player {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.active-name-player {
+    font-weight: 600;
+}
+.score {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+    color: #bf2e34;
+}
+.current-box {
+    padding: 2rem 4rem;
+    background-color: #b84e52;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 20px;
+}
+.new-game {
+    top: 50px;
+}
+.roll-dice {
+    bottom: 150px;
+}
+.hold {
+    bottom: 50px;
+}
+.hidden {
+    display: none;
+}
+.winner {
+    background: linear-gradient(to top left, green, rgb(61, 155, 81));
+}

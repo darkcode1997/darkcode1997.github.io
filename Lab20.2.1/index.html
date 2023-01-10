@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lab20.2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <section>
+        <section class="player-box player-box-1 active">
             <div>
-                <p class="name-player player-1">player 1</p>
-                <p class="score score-player-1"></p>
+                <p class="name-player player-1 active-name-player">player 1</p>
+                <p class="score score-player-1">0</p>
             </div>
-            <div>
+            <div class="current-box">
                 <p class="title-current">Current</p>
-                <p class="score-current">0</p>
+                <p class="score-current score-current-player-1">0</p>
             </div>
         </section>
-        <section>
-
+        <section  class="player-box player-box-2">
+            <div>
+                <p class="name-player player-2">player 2</p>
+                <p class="score score-player-2">0</p>
+            </div>
+            <div class="current-box">
+                <p class="title-current">Current</p>
+                <p class="score-current score-current-player-2">0</p>
+            </div>
         </section>
-        <div class="new-game">
-            <button class="btn">New Game</button>
-        </div>
-        <div class="roll-dice">
-            <button class="btn">Roll Dice</button>
-        </div>
-        <div class="hold">
-            <button class="btn">Hold</button>
-        </div>
-        
-        
+        <img src="./images/dice-1.png" class="images hidden" alt="">
+        <button class="btn new-game">New Game</button>
+        <button class="btn roll-dice">Roll Dice</button>
+        <button class="btn hold">Hold</button>
     </div>
+    <script src="./index.js"></script>
 </body>
 </html>
