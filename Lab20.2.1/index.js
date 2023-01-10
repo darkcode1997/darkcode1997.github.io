@@ -23,8 +23,8 @@ const initGame = () => {
     scoreCurrentPlayer1.textContent = 0
     scoreCurrentPlayer2.textContent = 0
     images.classList.add('hidden')
-    player1El.classList.remove('player--winner');
-    player2El.classList.remove('player--winner');
+    player1El.classList.remove('winner');
+    player2El.classList.remove('winner');
     player1El.classList.add('active');
     player2El.classList.remove('active');
 }
