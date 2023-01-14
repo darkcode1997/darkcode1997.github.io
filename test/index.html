@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (max-width: 575px) {
+            body {
+                background-color: #00FF00;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 767px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media (min-width: 992px) {
+            body {
+                background-color: yellow;
+            }
+        }
+
+        .container {
+            width: 900px;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            clear: both;
+        }
+
+        .layout-1 {
+            background-color: red;
+            width: 33.33%;
+            float: left;
+        }
+
+        .layout-2 {
+            background-color: green;
+            width: 33.33%;
+            float: left;
+        }
+
+        .layout-3 {
+            background-color: blue;
+            width: 33.33%;
+            float: left;
+        }
+    </style>
+    <script>
+        let arrayA = [1, 2, 3, 4, 5]
+        for (let index = 4; index >= 0; index--) {
+            console.log(arrayA[index])
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="https://www.google.com/">Google</a>
+    </header>
+    <main>
+        <div class="container">
+            <div class="layout-1">1</div>
+            <div class="layout-2">2</div>
+            <div class="layout-3">3</div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
