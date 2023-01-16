@@ -6,22 +6,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="menu-bar.css">
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+        }
+        a {
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            margin: 40px 0;
+            font-weight: 600;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px;
+            overflow: auto;
+        }
+        .container::after {
+            content: '';
+            position: absolute;
+            clear: both;
+        }
+        .layout {
+            float: left;
+            width: 100%;
+            height: 300px;
+        }
+        .layout-1 {
+            background-color: red;
+        }
+
+        .layout-2 {
+            background-color: green;
+        }
+
+        .layout-3 {
+            background-color: blue;
+        }
         @media (max-width: 575px) {
             body {
-                background-color: #00FF00;
+                background-color: deeppink;
+            }
+            .layout {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .layout:last-child {
+                margin-bottom: 0px;
             }
         }
 
         @media (min-width: 576px) and (max-width: 767px) {
             body {
-                background-color: red;
+                background-color: blanchedalmond;
+            }
+            .layout {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .layout:last-child {
+                margin-bottom: 0px;
             }
         }
 
         @media (min-width: 768px) {
             body {
-                background-color: blue;
+                background-color: cadetblue;
+            }
+            .layout {
+                width: 50%;
             }
         }
 
@@ -29,34 +90,9 @@
             body {
                 background-color: yellow;
             }
-        }
-
-        .container {
-            width: 900px;
-        }
-
-        .container::after {
-            content: '';
-            position: absolute;
-            clear: both;
-        }
-
-        .layout-1 {
-            background-color: red;
-            width: 33.33%;
-            float: left;
-        }
-
-        .layout-2 {
-            background-color: green;
-            width: 33.33%;
-            float: left;
-        }
-
-        .layout-3 {
-            background-color: blue;
-            width: 33.33%;
-            float: left;
+            .layout {
+                width: 33.33%;
+            }
         }
     </style>
     <script>
@@ -69,13 +105,34 @@
 
 <body>
     <header>
-        <a href="https://www.google.com/">Google</a>
+        <div class="logo">
+            <a href="https://www.google.com/">Google</a>
+        </div>
+        <nav class="menu">
+            <ul class="lists-menu">
+                <li class="list-menu-item">
+                    <a href="#">Trang chủ</a>
+                </li>
+                <li class="list-menu-item">
+                    <a href="#">Sản phẩm</a>
+                </li>
+                <li class="list-menu-item">
+                    <a href="#">Tin Tức</a>
+                </li>
+                <li class="list-menu-item">
+                    <a href="#">Liên hệ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="icon-bar">
+            <img src="./menu.png" alt="bar-icon">
+        </div>
     </header>
     <main>
         <div class="container">
-            <div class="layout-1">1</div>
-            <div class="layout-2">2</div>
-            <div class="layout-3">3</div>
+            <div class="layout-1 layout">1</div>
+            <div class="layout-2 layout">2</div>
+            <div class="layout-3 layout">3</div>
         </div>
     </main>
     <footer>
