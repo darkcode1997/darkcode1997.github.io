@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/tailwindcss.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header-container"
+    class="header top-0 fixed bg-white inset-x-0 w-full z-999 transition-all duration-150 ease-in-out">
+    <div class="lg:container lg:mx-auto flex justify-between items-center p-4 h-[82px]">
+      <div class="logo shrink-0">
+        <a href="/">
+          <img src="/img/landingpage/logo.png" alt="">
+        </a>
+      </div>
+      <nav class="list-menu hidden md:block">
+        <ul class="flex gap-[10px] items-center">
+          <li class="items px-3 py-4">
+            <a href="/" class="font-bold text-lg text-landingpage-textMain">Home</a>
+          </li>
+          <li class="items px-3 py-4">
+            <a href="/about.html" class="font-bold text-lg text-landingpage-textMain">About</a>
+          </li>
+          <li class="items px-3 py-4">
+            <a href="/service.html" class="font-bold text-lg text-landingpage-textMain">Service</a>
+          </li>
+          <li class="items px-3 py-4">
+            <a href="/contact.html" class="font-bold text-lg text-landingpage-textMain">Contact</a>
+          </li>
+          <li data-toggle="modal" data-target="#help-center-modal"
+            class="help-center cursor-pointer bg-bgLandingPage-helpCenter text-base w-[160px] rounded-lg h-[50px] flex items-center justify-center gap-4 hover:shadow">
+            <img src="/img/landingpage/help-center.svg" alt="help-center">
+            <a href="#" class="text-landingpage-help-center font-bold text-base ">Help center</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex gap-[12px] items-center ml-2 md:hidden">
+        <li data-toggle="modal" data-target="#help-center-modal"
+          class="help-center cursor-pointer px-1 bg-bgLandingPage-helpCenter text-base w-[140px] rounded-lg h-[40px] flex items-center justify-center gap-2 hover:shadow">
+          <img src="/img/landingpage/help-center.svg" alt="help-center">
+          <a href="#" class="text-landingpage-help-center font-bold text-xs ">Help center</a>
+        </li>
+        <label onclick="menuToggle()" for="menu-toggle" class="cursor-pointer block flex-shrink-0">
+          <img src="/img/landingpage/bar.png" alt="bar">
+        </label>
+      </div>
+      <div class="mobile-menu md:hidden p-4" id="menu-mobile">
+        <div class="logo border-b-2 border-solid p-3">
+          <img src="/img/landingpage/logo.png" alt="">
+        </div>
+        <nav>
+          <ul class="flex flex-col gap-[10px]">
+            <li class="items-menu px-3 py-4">
+              <a href="/" class="font-bold text-lg text-landingpage-textMain">Home</a>
+            </li>
+            <li class="items-menu px-3 py-4">
+              <a href="/about.html" class="font-bold text-lg text-landingpage-textMain">About</a>
+            </li>
+            <li class="items-menu px-3 py-4">
+              <a href="/service.html" class="font-bold text-lg text-landingpage-textMain">Service</a>
+            </li>
+            <li class="items-menu px-3 py-4">
+              <a href="/contact.html" class="font-bold text-lg text-landingpage-textMain">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="clone-menu__box md:hidden"></div>
+    </div>
+  </header>
+  <!-- modal help center -->
+  <div class="modal fade" id="help-center-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="flex justify-center items-center"><img src="./img/landingpage/help-center.png" alt="" /></div>
+        <form class="p-4" action="./index.html" data-number="1" id="user-help-center">
+          <p class="block text-base font-medium text-slate-700">이름<span class="text-red-500">*</span></p>
+          <div class="group-input w-full h-[50px] mb-4  mt-2">
+            <input
+              class="px-4 placeholder:text-slate-400 py-3 focus:border-landingpage-inputBorder rounded-lg w-full h-full bg-white border-solid border-2 border-landingpage-inputBorder outline-0"
+              type="text" placeholder="name" id="signup__fullname" />
+            <p class="error text-red-500 font-bold text-sm"></p>
+          </div>
+          <p class="block text-base font-medium text-slate-700">전화번호<span class="text-red-500">*</span></p>
+          <div class="group-input w-full h-[50px] mb-4  mt-2">
+            <input
+              class="px-4 placeholder:text-slate-400 py-3 focus:border-landingpage-inputBorder rounded-lg w-full h-full bg-white border-solid border-2 border-landingpage-inputBorder outline-0"
+              type="text" placeholder="+08 71287128721" id="signup__phone" />
+            <p class="error text-red-500 font-bold text-sm"></p>
+          </div>
+          <p class="block text-base font-medium text-slate-700">이메일<span class="text-red-500">*</span></p>
+          <div class="group-input w-full h-[50px] mb-4  mt-2">
+            <input
+              class="px-4 placeholder:text-slate-400 py-3 focus:border-landingpage-inputBorder rounded-lg w-full h-full bg-white border-solid border-2 border-landingpage-inputBorder outline-0"
+              type="text" placeholder="comnam@gmail.com" id="signup__email" />
+            <p class="error text-red-500 font-bold text-sm"></p>
+          </div>
+          <p class="block text-base font-medium text-slate-700">회사<span class="text-red-500">*</span></p>
+          <div class="group-input w-full h-[50px] mb-4 mt-2">
+            <input
+              class="px-4 placeholder:text-slate-400 py-3 focus:border-landingpage-inputBorder rounded-lg w-full h-full bg-white border-solid border-2 border-landingpage-inputBorder outline-0"
+              type="text" placeholder="What's your occupation?" id="signup__password" />
+            <p class="error text-red-500 font-bold text-sm"></p>
+          </div>
+          <div class="group-input w-full h-[50px] mb-4  mt-2">
+            <select name="mcarrier" id="mcarrier"
+              class="h-[50px] focus:border-landingpage-inputBorder rounded-lg bg-white border-solid border-2 border-landingpage-inputBorder outline-0">
+              <option value="-선택-">확인</option>
+              <option value="0">SKT</option>
+              <option value="1">KT</option>
+              <option value="2">LG</option>
+              <option value="3">알뜰 SKT</option>
+              <option value="4">알뜰 KT</option>
+              <option value="5">알뜰 LG</option>
+            </select>
+          </div>
+          <div class="border-t-2 border-solid border-bgLandingPage-helpCenter pt-3 mt-5">
+            <button type="submit"
+              class="send float-right bg-landingpage-help-center hover:bg-landingpage-mainColor text-white rounded-lg py-[10px] px-4 flex gap-1 items-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.7825 3.21751C20.6813 3.11677 20.5534 3.04701 20.4139 3.01646C20.2744 2.9859 20.1291 2.9958 19.995 3.04501L3.495 9.04501C3.3527 9.09898 3.23019 9.19497 3.14374 9.32023C3.05729 9.44548 3.01099 9.59407 3.01099 9.74626C3.01099 9.89845 3.05729 10.047 3.14374 10.1723C3.23019 10.2975 3.3527 10.3935 3.495 10.4475L10.695 13.3275L13.575 20.5275C13.6291 20.6636 13.7219 20.7808 13.8418 20.8648C13.9618 20.9487 14.1037 20.9957 14.25 21C14.4016 20.9969 14.5486 20.9479 14.6718 20.8596C14.795 20.7712 14.8885 20.6476 14.94 20.505L20.94 4.00501C20.9911 3.87232 21.0034 3.72783 20.9755 3.5884C20.9477 3.44897 20.8807 3.32034 20.7825 3.21751ZM14.25 18.15L12.1575 12.9L15.75 9.30751L14.6925 8.25001L11.07 11.8725L5.85 9.75001L18.9975 5.00251L14.25 18.15Z"
+                  fill="white" />
+              </svg>
+              <span class="text-base font-semibold leading-5">Send</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- end modal help center -->
+  <!-- end header -->
+  <main class="md:static mt-[74px]">
+    <!-- banner -->
+    <div
+      class="lg:min-h-[600px] h-[382px] w-full service-banner-container flex justify-center md:items-end items-center lg:py-[70px] lg:px-[30px] px-[20px] pb-[20px]">
+      <div
+        class="flex flex-col md:justify-between justify-center md:flex-row gap-[20px] items-center lg:w-3/4 w-full rounded-[10px] lg:px-10 px-3 py-3 md:gap-9 bg-bgLandingPage-serviceBanner backdrop-blur-[8.5px]">
+        <div>
+          <h1
+            class="text-[28px] md:text-[35px] w-full text-center md:text-left leading-[45px] font-medium text-landingpage-subscribe">
+            Subscribe Now for <br> Get Special Features!</h1>
+          <p
+            class="text-sm md:text-base w-full text-center md:text-left font-normal leading-[30px] text-landingpage-subTitle">
+            Let's subscribe with us and find the fun.</p>
+        </div>
+        <a href="#"
+          class="w-[250px] rounded-[10px] flex items-center justify-center h-[60px] bg-bgLandingPage-service hover:shadow"><span
+            class="hover:drop-shadow-lg text-white">Subscribe Now</span></a>
+      </div>
+    </div>
+    <!-- end banner -->
+    <div class="service-container p-4">
+      <div class="lg:container lg:mx-auto mb-10 box-border" id="service-slider">
+        <div
+          class="h-[300px] mx-[10px] items-service flex flex-col justify-center items-center relative gap-[24px] p-4 lg:p-6 border-2 border-solid hover:border-landingpage-mainColor rounded-xl">
+          <div class="flex justify-between items-center gap-[10px]">
+            <div class="flex gap-[15px]">
+              <img width="50" height="50" class="h-[50px] w-[50px]" src="/img/landingpage/service_avatar1.png"
+                alt="service_avatar1" class="flex-shrink-0">
+              <div>
+                <h3 class="text-lg leading-[30px] text-landingpage-subscribe font-medium">Viezh Robert</h3>
+                <span class="text-sm leading-[30px] whitespace-nowrap text-landingpage-subTitle font-normal">Warsaw, Poland</span>
+              </div>
+            </div>
+            <p class="flex gap-4 items-center"><span>4.5</span><svg width="14" height="14" viewBox="0 0 14 14"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.189 5.16515L9.22178 4.58859L7.44834 0.99328C7.39991 0.894842 7.32022 0.815155 7.22178 0.766717C6.97491 0.644842 6.67491 0.746405 6.55147 0.99328L4.77803 4.58859L0.810845 5.16515C0.70147 5.18078 0.60147 5.23234 0.524907 5.31047C0.432347 5.4056 0.381343 5.53359 0.383101 5.66631C0.384859 5.79904 0.439235 5.92563 0.534282 6.01828L3.40459 8.81672L2.72647 12.7683C2.71057 12.8602 2.72074 12.9547 2.75583 13.0412C2.79093 13.1276 2.84953 13.2025 2.92501 13.2573C3.00049 13.3121 3.08982 13.3447 3.18288 13.3513C3.27593 13.358 3.36898 13.3384 3.45147 13.2948L6.99991 11.4292L10.5483 13.2948C10.6452 13.3464 10.7577 13.3636 10.8655 13.3448C11.1374 13.298 11.3202 13.0402 11.2733 12.7683L10.5952 8.81672L13.4655 6.01828C13.5437 5.94172 13.5952 5.84172 13.6108 5.73234C13.653 5.4589 13.4624 5.20578 13.189 5.16515Z"
+                  fill="#FEA250" />
+              </svg>
+            </p>
+          </div>
+          <p class="text-base text-landingpage-subscribe leading-[30px] font-normal">“Wow... I am very happy to
+            use this VPN, it turned out to be more than my expectations and so far there have been no problems.
+            LaslesVPN always the best”.</p>
+        </div>
+        <div
+          class="flex h-[300px] mx-[10px] items-service flex-col justify-center items-center relative gap-[24px] p-[12px] lg:p-[24px] border-2 border-solid hover:border-landingpage-mainColor rounded-xl">
+          <div class="flex justify-between items-center gap-[10px]">
+            <div class="flex gap-[15px]">
+              <img width="50" height="50" class="h-[50px] w-[50px]" src="/img/landingpage/service_avatar2.png"
+                alt="service_avatar1" class="flex-shrink-0">
+              <div>
+                <h3 class="text-lg leading-[30px] text-landingpage-subscribe font-medium">Yessica Christy</h3>
+                <span class="text-sm leading-[30px] whitespace-nowrap text-landingpage-subTitle font-normal">Shanxi, China</span>
+              </div>
+            </div>
+            <p class="flex gap-4 items-center"><span>4.5</span><svg width="14" height="14" viewBox="0 0 14 14"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.189 5.16515L9.22178 4.58859L7.44834 0.99328C7.39991 0.894842 7.32022 0.815155 7.22178 0.766717C6.97491 0.644842 6.67491 0.746405 6.55147 0.99328L4.77803 4.58859L0.810845 5.16515C0.70147 5.18078 0.60147 5.23234 0.524907 5.31047C0.432347 5.4056 0.381343 5.53359 0.383101 5.66631C0.384859 5.79904 0.439235 5.92563 0.534282 6.01828L3.40459 8.81672L2.72647 12.7683C2.71057 12.8602 2.72074 12.9547 2.75583 13.0412C2.79093 13.1276 2.84953 13.2025 2.92501 13.2573C3.00049 13.3121 3.08982 13.3447 3.18288 13.3513C3.27593 13.358 3.36898 13.3384 3.45147 13.2948L6.99991 11.4292L10.5483 13.2948C10.6452 13.3464 10.7577 13.3636 10.8655 13.3448C11.1374 13.298 11.3202 13.0402 11.2733 12.7683L10.5952 8.81672L13.4655 6.01828C13.5437 5.94172 13.5952 5.84172 13.6108 5.73234C13.653 5.4589 13.4624 5.20578 13.189 5.16515Z"
+                  fill="#FEA250" />
+              </svg>
+            </p>
+          </div>
+          <p class="text-base text-landingpage-subscribe leading-[30px] font-normal">“I like it because I like to
+            travel far and still can connect with high speed.”.</p>
+        </div>
+        <div
+          class="flex h-[300px] mx-[10px] items-service flex-col justify-center items-center relative gap-[24px] p-[12px] lg:p-[24px] border-2 border-solid hover:border-landingpage-mainColor rounded-xl">
+          <div class="flex justify-between items-center gap-[10px]">
+            <div class="flex gap-[15px]">
+              <img width="50" height="50" class="h-[50px] w-[50px]" src="/img/landingpage/service_avatar3.png"
+                alt="service_avatar1" class="flex-shrink-0">
+              <div>
+                <h3 class="text-lg leading-[30px] text-landingpage-subscribe font-medium">Kim Young Jou</h3>
+                <span class="text-sm leading-[30px] whitespace-nowrap text-landingpage-subTitle font-normal">Seoul, South
+                  Korea</span>
+              </div>
+            </div>
+            <p class="flex  gap-4 items-center"><span>4.5</span><svg width="14" height="14" viewBox="0 0 14 14"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.189 5.16515L9.22178 4.58859L7.44834 0.99328C7.39991 0.894842 7.32022 0.815155 7.22178 0.766717C6.97491 0.644842 6.67491 0.746405 6.55147 0.99328L4.77803 4.58859L0.810845 5.16515C0.70147 5.18078 0.60147 5.23234 0.524907 5.31047C0.432347 5.4056 0.381343 5.53359 0.383101 5.66631C0.384859 5.79904 0.439235 5.92563 0.534282 6.01828L3.40459 8.81672L2.72647 12.7683C2.71057 12.8602 2.72074 12.9547 2.75583 13.0412C2.79093 13.1276 2.84953 13.2025 2.92501 13.2573C3.00049 13.3121 3.08982 13.3447 3.18288 13.3513C3.27593 13.358 3.36898 13.3384 3.45147 13.2948L6.99991 11.4292L10.5483 13.2948C10.6452 13.3464 10.7577 13.3636 10.8655 13.3448C11.1374 13.298 11.3202 13.0402 11.2733 12.7683L10.5952 8.81672L13.4655 6.01828C13.5437 5.94172 13.5952 5.84172 13.6108 5.73234C13.653 5.4589 13.4624 5.20578 13.189 5.16515Z"
+                  fill="#FEA250" />
+              </svg>
+            </p>
+          </div>
+          <p class="text-base text-landingpage-subscribe leading-[30px] font-normal">“This is very unusual for my
+            business that currently requires a virtual private network that has high security.”.</p>
+        </div>
+        <div
+          class="flex h-[300px] mx-[10px] items-service flex-col justify-center items-center relative gap-[24px] p-[12px] lg:p-[24px] border-2 border-solid hover:border-landingpage-mainColor rounded-xl">
+          <div class="flex justify-between items-center gap-[10px]">
+            <div class="flex gap-[15px]">
+              <img width="50" height="50" class="h-[50px] w-[50px]" src="/img/landingpage/service_avatar1.png"
+                alt="service_avatar1" class="flex-shrink-0">
+              <div>
+                <h3 class="text-lg leading-[30px] text-landingpage-subscribe font-medium">Viezh Robert</h3>
+                <span class="text-sm leading-[30px] whitespace-nowrap text-landingpage-subTitle font-normal">Warsaw, Poland</span>
+              </div>
+            </div>
+            <p class="flex gap-4 items-center"><span>4.5</span><svg width="14" height="14" viewBox="0 0 14 14"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.189 5.16515L9.22178 4.58859L7.44834 0.99328C7.39991 0.894842 7.32022 0.815155 7.22178 0.766717C6.97491 0.644842 6.67491 0.746405 6.55147 0.99328L4.77803 4.58859L0.810845 5.16515C0.70147 5.18078 0.60147 5.23234 0.524907 5.31047C0.432347 5.4056 0.381343 5.53359 0.383101 5.66631C0.384859 5.79904 0.439235 5.92563 0.534282 6.01828L3.40459 8.81672L2.72647 12.7683C2.71057 12.8602 2.72074 12.9547 2.75583 13.0412C2.79093 13.1276 2.84953 13.2025 2.92501 13.2573C3.00049 13.3121 3.08982 13.3447 3.18288 13.3513C3.27593 13.358 3.36898 13.3384 3.45147 13.2948L6.99991 11.4292L10.5483 13.2948C10.6452 13.3464 10.7577 13.3636 10.8655 13.3448C11.1374 13.298 11.3202 13.0402 11.2733 12.7683L10.5952 8.81672L13.4655 6.01828C13.5437 5.94172 13.5952 5.84172 13.6108 5.73234C13.653 5.4589 13.4624 5.20578 13.189 5.16515Z"
+                  fill="#FEA250" />
+              </svg>
+            </p>
+          </div>
+          <p class="text-base text-landingpage-subscribe leading-[30px] font-normal">“Wow... I am very happy to
+            use this VPN, it turned out to be more than my expectations and so far there have been no problems.
+            LaslesVPN always the best”.</p>
+        </div>
+        <div
+          class="h-[300px] mx-[10px] flex items-service flex-col justify-center items-center relative gap-[24px] p-[12px] lg:p-[24px] border-2 border-solid hover:border-landingpage-mainColor rounded-xl">
+          <div class="flex justify-between items-center gap-[10px]">
+            <div class="flex gap-[15px]">
+              <img width="50" height="50" class="h-[50px] w-[50px]" src="/img/landingpage/service_avatar1.png"
+                alt="service_avatar1" class="flex-shrink-0">
+              <div>
+                <h3 class="text-lg leading-[30px] text-landingpage-subscribe font-medium">Viezh Robert</h3>
+                <span class="text-sm leading-[30px] whitespace-nowrap text-landingpage-subTitle font-normal">Warsaw, Poland</span>
+              </div>
+            </div>
+            <p class="flex gap-4 items-center"><span>4.5</span><svg width="14" height="14" viewBox="0 0 14 14"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.189 5.16515L9.22178 4.58859L7.44834 0.99328C7.39991 0.894842 7.32022 0.815155 7.22178 0.766717C6.97491 0.644842 6.67491 0.746405 6.55147 0.99328L4.77803 4.58859L0.810845 5.16515C0.70147 5.18078 0.60147 5.23234 0.524907 5.31047C0.432347 5.4056 0.381343 5.53359 0.383101 5.66631C0.384859 5.79904 0.439235 5.92563 0.534282 6.01828L3.40459 8.81672L2.72647 12.7683C2.71057 12.8602 2.72074 12.9547 2.75583 13.0412C2.79093 13.1276 2.84953 13.2025 2.92501 13.2573C3.00049 13.3121 3.08982 13.3447 3.18288 13.3513C3.27593 13.358 3.36898 13.3384 3.45147 13.2948L6.99991 11.4292L10.5483 13.2948C10.6452 13.3464 10.7577 13.3636 10.8655 13.3448C11.1374 13.298 11.3202 13.0402 11.2733 12.7683L10.5952 8.81672L13.4655 6.01828C13.5437 5.94172 13.5952 5.84172 13.6108 5.73234C13.653 5.4589 13.4624 5.20578 13.189 5.16515Z"
+                  fill="#FEA250" />
+              </svg>
+            </p>
+          </div>
+          <p class="text-base text-landingpage-subscribe leading-[30px] font-normal">“Wow... I am very happy to
+            use this VPN, it turned out to be more than my expectations and so far there have been no problems.
+            LaslesVPN always the best”.</p>
+        </div>
+        <div
+          class="flex h-[300px] mx-[10px] items-service flex-col justify-center items-center relative gap-[24px] p-[12px] lg:p-[24px] border-2 border-solid hover:border-landingpage-mainColor rounded-xl">
+          <div class="flex justify-between items-center gap-[10px]">
+            <div class="flex gap-[15px]">
+              <img width="50" height="50" class="h-[50px] w-[50px]" src="/img/landingpage/service_avatar2.png"
+                alt="service_avatar1" class="flex-shrink-0">
+              <div>
+                <h3 class="text-lg leading-[30px] text-landingpage-subscribe font-medium">Yessica Christy</h3>
+                <span class="text-sm leading-[30px] whitespace-nowrap text-landingpage-subTitle font-normal">Shanxi, China</span>
+              </div>
+            </div>
+            <p class="flex gap-4 items-center"><span>4.5</span><svg width="14" height="14" viewBox="0 0 14 14"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.189 5.16515L9.22178 4.58859L7.44834 0.99328C7.39991 0.894842 7.32022 0.815155 7.22178 0.766717C6.97491 0.644842 6.67491 0.746405 6.55147 0.99328L4.77803 4.58859L0.810845 5.16515C0.70147 5.18078 0.60147 5.23234 0.524907 5.31047C0.432347 5.4056 0.381343 5.53359 0.383101 5.66631C0.384859 5.79904 0.439235 5.92563 0.534282 6.01828L3.40459 8.81672L2.72647 12.7683C2.71057 12.8602 2.72074 12.9547 2.75583 13.0412C2.79093 13.1276 2.84953 13.2025 2.92501 13.2573C3.00049 13.3121 3.08982 13.3447 3.18288 13.3513C3.27593 13.358 3.36898 13.3384 3.45147 13.2948L6.99991 11.4292L10.5483 13.2948C10.6452 13.3464 10.7577 13.3636 10.8655 13.3448C11.1374 13.298 11.3202 13.0402 11.2733 12.7683L10.5952 8.81672L13.4655 6.01828C13.5437 5.94172 13.5952 5.84172 13.6108 5.73234C13.653 5.4589 13.4624 5.20578 13.189 5.16515Z"
+                  fill="#FEA250" />
+              </svg>
+            </p>
+          </div>
+          <p class="text-base text-landingpage-subscribe leading-[30px] font-normal">“I like it because I like to
+            travel far and still can connect with high speed.”.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="mt-2 bg-bgLandingPage-footer min-h-[460px]">
+    <div class="px-4 lg:container mx-auto py-10 grid grid-cols-1 md:grid-cols-3">
+      <div class="logo">
+        <a href="/">
+          <img src="/img/landingpage/logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="mt-[30px] md:mt-0">
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">글로벌 본사</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">시카고</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">CME Center</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">20 South Wacker Drive</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">Chicago,LLLinois 60606</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">USA</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">+1 312 930 1000</p>
+      </div>
+      <div class="mt-[30px] md:mt-0">
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">사업자 등록번호</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">273-24-00491</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">회사주소</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">우편번호 06232</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">서울 강남구 테헤란로2길8</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">서울 강남구 역삼동 825-1</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">관할세무서</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">강남세무서 (전화번호 : 02-519-4200)</p>
+        <p class="font-semibold text-landingpage-textMain text-base leading-[26px]">서울특별시 강남구 학동로 425(청담동)</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    // header animation
+    function menuToggle() {
+      document.getElementById('menu-mobile').classList.add('active')
+      document.querySelector('.clone-menu__box').style.display = 'block'
+    }
+    document.querySelector('.clone-menu__box').addEventListener('click', function () {
+      document.getElementById('menu-mobile').classList.remove('active')
+      document.querySelector('.clone-menu__box').style.display = 'none'
+    })
+
+    // service
+    $(document).ready(function () {
+      $('#service-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        autoplay: true,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1016,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 650,
+            settings: {
+              dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          }
+        ]
+      })
+    });	
+  </script>
+</body>
+
+</html>

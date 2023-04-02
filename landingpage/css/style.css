@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+svg {
+  display: inline;
+  border-bottom: 4px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.items:hover,
+.items:active {
+  color: #ee6238;
+  border-bottom: 4px solid #ee6238;
+}
+
+.items:hover a {
+  color: #ee6238;
+}
+
+#header-container {
+  transform: translateY(0);
+  transition: transform 300ms linear;
+}
+
+#header-container.is-hidden {
+  transform: translateY(-100%);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -70%;
+  width: 70%;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 1.2rem 1rem 3rem rgba(0, 0, 0, 0.03);
+  z-index: 15;
+  transition: transform 0.3s linear;
+}
+
+#menu-mobile.active {
+  transform: translateX(100%);
+}
+
+.clone-menu__box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(235, 230, 230, 0.6);
+  z-index: 5;
+  display: none;
+}
+
+/* banner */
+.banner-container {
+  background-image: url("../img/landingpage/banner-home.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-banner-container {
+  background-image: url("../img/landingpage/about-banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service-banner-container {
+  background-image: url("../img/landingpage/service-banner.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* about */
+
+/* css slick */
+.slick-dots li button:before {
+  width: 15px;
+  height: 15px;
+  background: #DDE0E4;
+  border-radius: 100%;
+  font-size: 0px;
+}
+
+.slick-dots li button:before:hover {
+  background: #EE6238;
+}
+
+.slick-dots li.slick-active button:before {
+  background: #EE6238;
+}
+
+@media screen and (min-width: 640px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1016px) {
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ff7b01, #0c6fd8);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#ff7b01, #0c6fd8);
+  }
+
+  .about-box1::after,
+  .about-box2::after {
+    position: absolute;
+    content: '';
+    background-image: url('../img/landingpage/eclips.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 104px;
+    height: 12px;
+    top: 50%;
+    right: -104px;
+
+  }
+}
+
+/* Slider */
+/* Slider */
+.slick-next.slick-arrow, .slick-prev.slick-arrow {
+  display: none !important;
+}
